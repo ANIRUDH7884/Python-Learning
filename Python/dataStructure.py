@@ -112,6 +112,11 @@ copyList = ["anirudh" , "ammu"]
 myList = copyList.copy()
 print(myList)
 
+#count()
+mobiles = ["samsung" , "Iphone" , "Oneplus", "Vivo" , "Oppo" , "Oneplus"]
+counts = mobiles.count("Oneplus")
+print(counts)
+
 #eXCERSISE
 
 #Create a list of 5 mobile brands and print it.
