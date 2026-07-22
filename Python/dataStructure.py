@@ -16,7 +16,7 @@ print(type(list))
 #List Constructor
 #Another Method by using list() 
 
-#method 1
+#method 1 
 thelist = ["Bannana" , "Apple", "Organge"]
 print(thelist)
 
@@ -142,4 +142,64 @@ print(mobiles)
 employers_salary = ["15000" , "30000" , "5700" , "67900" , "45609"]
 print(employers_salary)
 
-a
+#List of Numbers and its Length
+Numbers = [10 , 30 , 40 , 50 , 60]
+print(len(Numbers))
+
+#Append an Element to the end of a List
+sampleList = ["Car" , "Bike" , "Auto"]
+sampleList.append("Scooter")
+print(sampleList)
+
+#insert an element at a sepcific position
+sampleList = ["Car" , "Bike" , "Auto"]
+sampleList.insert(1, "Scooter")
+print(sampleList)
+
+#Remove the first occurrence of an element in a list
+sampleList = ["Car" , "Bike" , "Auto"]
+sampleList.remove("Car")
+print(sampleList)
+
+#sum of all elements in a list
+Numbers = [10 , 30 , 40 , 50 , 60]
+Total = sum(Numbers)
+print(Total)
+
+#Acces the Third Element of a List
+sampleList = ["Car" , "Bike" , "Auto", "Scooter"]
+print(sampleList[3])
+
+#print the last element of a list
+sampleList = ["Car" , "Bike" , "Auto", "Scooter", "Truck"]
+print(sampleList[4])
+
+#Extract a Subset of elements from a list using slicing
+sampleList = ["Car" , "Bike" , "Auto", "Scooter", "Truck"]
+sliced = sampleList[1 : 4]
+print(sliced)
+
+#Reverse A list using slicing
+sampleList = ["Car" , "Bike" , "Auto", "Scooter", "Truck"]
+reversedList = sampleList[ : : -1]
+print(reversedList)
+
+#sort a list of numbers in ascending order
+Numbers = [10 , 30 , 40 , 50 , 60]
+Numbers.sort()
+print(Numbers)
+
+#sort a list of numbers in ascending order
+sampleList = ["Car" , "Bike" , "Auto", "Scooter", "Truck"]
+sampleList.sort()
+print(sampleList)
+
+#Find the minimum and maximum
+Numbers = [10 , 30 , 40 , 50 , 60]
+print(min(Numbers))
+print(max(Numbers))
+
+#count the Occurence of a specific element in a list
+sampleList = ["Car" , "Bike" , "Auto", "Scooter", "Truck" , "Car" , "Car"]
+counts = sampleList.count("Car")
+print(counts)
