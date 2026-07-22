@@ -107,15 +107,30 @@ sortingList =  ["c" , "a" , "d" , "b"]
 sortingList.sort()
 print(sortingList)
 
-#copy()
+#copy() - 
 copyList = ["anirudh" , "ammu"]
 myList = copyList.copy()
 print(myList)
 
-#count()
+#count() - to find the count of an item in a list
 mobiles = ["samsung" , "Iphone" , "Oneplus", "Vivo" , "Oppo" , "Oneplus"]
 counts = mobiles.count("Oneplus")
 print(counts)
+
+#Index() - to recogonise the position
+mobiles = ["samsung" , "Iphone" , "Oneplus", "Vivo" , "Oppo" , "Oneplus"]
+indexes = mobiles.index("Iphone")
+print(indexes)
+
+#reverse() - to reverse the order of the list
+mobiles = ["samsung" , "Iphone" , "Oneplus", "Vivo" , "Oppo" , "Oneplus"]
+mobiles.reverse()
+print(mobiles)
+
+#sum() - to get the sum of a numbered list
+#min()
+#max()
+
 
 #eXCERSISE
 
@@ -127,3 +142,4 @@ print(mobiles)
 employers_salary = ["15000" , "30000" , "5700" , "67900" , "45609"]
 print(employers_salary)
 
+a
