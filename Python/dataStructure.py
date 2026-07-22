@@ -203,3 +203,118 @@ print(max(Numbers))
 sampleList = ["Car" , "Bike" , "Auto", "Scooter", "Truck" , "Car" , "Car"]
 counts = sampleList.count("Car")
 print(counts)
+
+#Employee Joining System
+employees = [ "Anirudh", "Ammu", "Rahul"]
+employees.append("Arjun")
+print(employees)
+
+#Employee Resignation System
+employees = [ "Anirudh", "Ammu", "Rahul", "Arjun"]
+employees.remove("Rahul")
+print(employees)
+
+#Mobile Store Inventory
+mobiles = [ "Samsung","iPhone","OnePlus", "OnePlus", "Vivo"]
+counts = mobiles.count("Oneplus")
+print("Total Count of Oneplus : " , counts)
+
+#Student Ranking
+marks = [ 75, 90, 45, 88, 99, 67 ]
+print(max(marks))
+print(min(marks))
+
+#Company Payroll
+salaries = [
+    15000,
+    20000,
+    35000,
+    18000,
+    22000
+]
+total = sum(salaries)
+highest = max(salaries)
+lowest = min(salaries)
+
+print("Total salary for employees This month :" , total)
+print("Highest Salary :" , highest)
+print("Lowest Salary :" , lowest)
+
+#E-Commerce Product Sorting
+prices = [
+    3000,
+    500,
+    1500,
+    7000,
+    2500
+]
+
+prices.sort()
+print(prices)
+
+# Customer Search
+customers = [
+    "Anirudh",
+    "Ammu",
+    "Rahul",
+    "Arjun"
+]
+
+if "Ammu" in customers :
+    print("Customer Found")
+else :
+    print("Customer Not Found")
+
+#Dashboard Preview
+employees = [
+    "Anirudh",
+    "Ammu",
+    "Rahul",
+    "Arjun",
+    "Vishnu",
+    "Akhil"
+]
+print(employees[ : 3])
+
+#Latest Chat Messages
+messages = [
+    "Hello",
+    "How are you?",
+    "Good Morning",
+    "See you"
+]
+messages.reverse()
+print(messages)
+
+#Company Team Merge
+developers = [
+    "Anirudh",
+    "Rahul"
+]
+
+testers = [
+    "Ammu",
+    "Arjun"
+]
+
+developers.extend(testers)
+print(developers)
+
+#bonus : 
+employees = [
+    "Anirudh",
+    "Ammu",
+    "Rahul"
+]
+
+# Arjun joins.
+# Rahul resigns.
+# Find how many employees are there now.
+# Print employee list in reverse order.
+
+employees.append("Arjun")
+employees.remove("Rahul")
+print(len(employees))
+employees.reverse()
+print(employees)
+
