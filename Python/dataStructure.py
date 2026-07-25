@@ -318,3 +318,184 @@ print(len(employees))
 employees.reverse()
 print(employees)
 
+#Tupple
+thisTupple = ("Apple" , "Orange" , "mango")
+print(thisTupple)
+
+thisTupple = ("Apple" , "Orange" , "mango" , "Apple")
+print(thisTupple)
+print(len(thisTupple))
+
+thistupple = ("apple" ,)
+print(type(thistupple))
+
+thistupple = ("apple")
+print(type(thistupple))
+
+#tuple constructor
+thistuple = tuple(("hello" , "hi" , "hey"))
+print(thistuple)
+print(type(thistuple))
+
+#Accessing elements
+print(thistuple[2])
+print(thistuple[-1])
+
+#Accessing Multiple elements
+print(thistuple[0:2])
+
+#without starting index
+print(thistuple[ : 2])
+
+#without end Index
+print(thistuple[0 : ])
+
+#negative indexing
+print(thistuple[-3 : -1])
+
+thistuple = tuple(("hello" , "hi" , "hey"))
+
+if "hello" in thistuple :
+    print("hello Welcome")
+else:
+    print("didnt found!")
+
+#Update Tuple
+mainTuple = ("swiss" , "corso", "Casio" , "titan")
+
+#want to add a new element at th position of casio
+listing = list(mainTuple)
+listing.insert(2, "Seiko")
+listing.append("Armour")
+print(listing)
+
+tupling = tuple(listing)
+print(tupling)
+
+#Task 1 append watermelon
+a=("apple" , "banana", "cherry", "Orange")
+
+listing = list(a)
+listing.append("Watermelon")
+
+tupling = tuple(listing)
+print(tupling)
+
+#task 2 to remove the cherry
+a=("apple" , "banana", "cherry", "Orange")
+
+listing = list(a)
+listing.remove("cherry")
+
+tupling = tuple(listing)
+print(tupling)
+
+#sets
+thisSets = {'apple' , 'orange', 'mango',}
+print(thisSets)
+
+duplicateSets = {'apple' , 'orange', 'mango', 'apple'}
+print(duplicateSets)
+
+setsCheck = {True , False , 1 , 0}
+print(setsCheck)
+print(len(setsCheck))
+print(type(setsCheck))
+
+sets_1 = set(('albin' , 'eric' , 'joan'))
+sets_1.add("Gavi")
+print(sets_1)
+
+sets_1 = set(('albin' , 'eric' , 'joan'))
+sets_2 = {'Gk' , 'Lmf' , 'rmf'}
+sets_1.update(sets_2)
+print(sets_1)
+
+sets_1 = set(('albin' , 'eric' , 'joan'))
+sets_1.remove('albin')
+print(sets_1)
+
+sets_1 = set(('albin' , 'eric' , 'joan'))
+# sets_1.remove('noun')
+sets_1.discard("noun")
+print(sets_1)
+
+sets_1 = set(('albin' , 'eric' , 'joan'))
+random = sets_1.pop()
+print(sets_1)
+
+sets_1 = set(('albin' , 'eric' , 'joan'))
+sets_1.clear()
+print(sets_1)
+
+sets_1 = set(('albin' , 'eric' , 'joan'))
+del sets_1
+
+
+set1 = {'messi' , 'alvarez' , 'montiel'}
+set2 = {'miami' , 'atletico' , 'lyon'}
+# set3 = set1.union(set2)
+set3 = set1 | set2 
+print(set3)
+
+set1 = {'messi' , 'alvarez' , 'miami'}
+set2 = {'miami' , 'atletico' , 'lyon'}
+# set3 = set1.intersection(set2)
+set3 = set1 & set2
+print(set3)
+
+#Tuple Excersise
+
+# Task 1
+employee = (
+    101,
+    "Anirudh",
+    "Developer",
+    25000
+)
+
+print(employee[0])
+print(employee[1])
+print(employee[3])
+
+# Exercise 2: Product Details
+product = (
+    "iPhone 17",
+    150000,
+    "Apple"
+)
+
+print(product[0])
+print(product[1])
+print(product[2])
+
+#Exercise 3: GPS Tracking System
+location = (
+    8.8932,
+    76.6141
+)
+
+print(location[0])
+print(location[1])
+
+#Exercise 4: Company Server
+server = (
+    "192.168.1.1",
+    8080
+)
+
+print(server[0])
+print(server[1])
+
+#Exercise 5: Movie Information
+movie = (
+    "Interstellar",
+    2014,
+    8.7
+)
+
+print(movie[0])
+print(movie[1])
+print(movie[2])
+
+#SET EXERCISES
