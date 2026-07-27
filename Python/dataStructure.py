@@ -498,4 +498,102 @@ print(movie[0])
 print(movie[1])
 print(movie[2])
 
+
 #SET EXERCISES
+students = {
+    "Anirudh",
+    "Ammu",
+    "Rahul"
+}
+students.add("Arjun")
+print(students)
+
+employees = {
+    "Anirudh",
+    "Ammu",
+    "Rahul",
+    "Arjun"
+}
+employees.remove("Rahul")
+print(employees)
+
+#Dictionaries
+thisDict = { 
+    "Name" : "Anirudh",
+    "age" : "22",
+    "gender" : "male"
+}
+
+print(thisDict)
+
+thisDict = { 
+    "Name" : "Anirudh",
+    "age" : "22",
+    "gender" : "male",
+    "year" : 2003,
+    "year" : 2004
+}
+print(thisDict)
+
+print(len(thisDict))
+
+thisDict = {
+    "Brand" : "Ford",
+    "electric" : False,
+    "year" : 1996,
+    "color" : ['red' , 'black', 'blue']
+}
+print(thisDict)
+print(type(thisDict))
+
+newDict = dict(name = "Anirudh" , age = "22")
+print(newDict)
+
+myInfo = dict(Name = "Anirudh" , Age = 22, Corse = "Data Science" , place = "Pathanamthitta")
+print(myInfo)
+
+My_name = myInfo['Name']
+print(My_name)
+
+my_Age = myInfo.get('Age')
+print(my_Age)
+
+keys_all = myInfo.keys()
+print(keys_all)
+
+all_values = myInfo.values()
+print(all_values)
+
+all_Items = myInfo.items()
+print(all_Items)
+
+myInfo['Gender'] = 'Male'
+all_keys = myInfo.keys()
+print(myInfo)
+
+myInfo["Age"] = 24
+print(myInfo)
+
+thisDict = {
+    "Brand" : "Ford",
+    "electric" : False,
+    "year" : 1996,
+    "color" : ['red' , 'black', 'blue']
+}
+
+x = thisDict.items()
+print(x)
+
+thisDict["year"] = 2026
+print(x)
+
+if "Brand" in thisDict :
+    print("Yes It Is In The List ")
+else:
+    print("Not Found")
+
+thisDict["electric"] = True
+print(thisDict)
+
+thisDict.update({"year" : 2027})
+print(thisDict)
