@@ -597,3 +597,26 @@ print(thisDict)
 
 thisDict.update({"year" : 2027})
 print(thisDict)
+
+thisDict.pop("year")
+print(thisDict)
+
+smartPhone = {
+  "Product" : "Oneplus 13",
+  "Brand" : "Oneplus",
+  "price" : 69999,
+  "stock" : 7,
+  "color" : "Black"
+}
+
+smartPhone.popitem()
+print(smartPhone)
+
+del smartPhone["stock"]
+print(smartPhone)
+
+# del smartPhone
+# print(smartPhone)
+
+smartPhone.clear()
+print(smartPhone)
