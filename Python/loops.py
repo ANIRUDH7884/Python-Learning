@@ -282,4 +282,132 @@ print("Average Salary :", average)
 
 #---------------------------------------------------------------------->
 
-#While Loop
+#While Loop Exercises
+#print 1- 10
+
+number = 1
+
+while number < 11 :
+    print(number)
+    number = number + 1
+
+
+#Reverse of 10 - 1
+
+number = 10
+
+while (number >= 1) :
+    print(number)
+    number = number - 1
+
+#task 3
+balance = 5000
+withdrawal = 1000
+
+while(balance > 0) :
+    balance = balance - withdrawal
+    print("Balance :", balance)
+    
+#task 4
+fuel = 5
+
+while (fuel > 1) :
+    print(fuel)
+    fuel = fuel - 1
+
+else:
+    print("Stop")
+
+#task 5
+remaining_files = 4
+
+while(remaining_files >= 1):
+    print("Download")
+    remaining_files = remaining_files - 1
+else:
+    print("stop")
+
+#task 6
+battery = 100
+
+while(battery >= 20):
+    print("Run")
+    battery = battery - 20
+else:
+    print("stop")
+
+#task 7
+progress = 0
+
+while(progress < 100) :
+    progress = progress + 20
+    print("Upload")
+else:
+    print("stop1")
+
+#task 8
+attempts = 3
+
+while(attempts > 0) :
+    print("Try")
+    attempts = attempts - 1
+else:
+    print("stop")
+
+#task 8
+stock = 50
+
+while(stock >= 5):
+    print("Sell")
+    stock = stock - 10
+else:
+    print("stop")
+
+#task9
+employee_ids = [101, 102, 103, 104, 105, 106]
+
+for employee in employee_ids :
+  print(employee)
+  if employee == 104 :
+      break
+
+#task10
+orders = [2500, 0, 4800, 0, 7200, 1500]
+
+for order in orders :
+    if order == 0 :
+        continue
+    print(order)
+
+#task11
+password = "Anirudh7884"
+
+pin = input("Enter the password :")
+
+while(pin != "Anirudh7884" ) :
+    print("Entered the wrong pin")
+    pin = input("Try Again :")
+
+print("Login Successfull")
+
+#task12
+
+actual_password = "mango@123"
+attempts = 3
+
+password = input("Enter the password : ")
+
+while (password != actual_password):
+    attempts = attempts - 1
+
+    if attempts == 0 :
+        print("Account Locked")
+        break
+
+    print("Wrong Password")
+    print("Remaining Attempts : ", attempts)
+    password = input("Try Again : ")
+
+if password == actual_password:
+    print("lOGIN SUCCESFULL")
+
