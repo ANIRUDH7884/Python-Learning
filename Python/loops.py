@@ -379,35 +379,60 @@ for order in orders :
         continue
     print(order)
 
-#task11
-password = "Anirudh7884"
+# #task11
+# password = "Anirudh7884"
 
-pin = input("Enter the password :")
+# pin = input("Enter the password :")
 
-while(pin != "Anirudh7884" ) :
-    print("Entered the wrong pin")
-    pin = input("Try Again :")
+# while(pin != "Anirudh7884" ) :
+#     print("Entered the wrong pin")
+#     pin = input("Try Again :")
 
-print("Login Successfull")
+# print("Login Successfull")
 
-#task12
+# #task12
 
-actual_password = "mango@123"
-attempts = 3
+# actual_password = "mango@123"
+# attempts = 3
 
-password = input("Enter the password : ")
+# password = input("Enter the password : ")
 
-while (password != actual_password):
-    attempts = attempts - 1
+# while (password != actual_password):
+#     attempts = attempts - 1
 
-    if attempts == 0 :
-        print("Account Locked")
-        break
+#     if attempts == 0 :
+#         print("Account Locked")
+#         break
 
-    print("Wrong Password")
-    print("Remaining Attempts : ", attempts)
-    password = input("Try Again : ")
+#     print("Wrong Password")
+#     print("Remaining Attempts : ", attempts)
+#     password = input("Try Again : ")
 
-if password == actual_password:
-    print("lOGIN SUCCESFULL")
+# if password == actual_password:
+#     print("lOGIN SUCCESFULL")
 
+#Find the odd and even Numbers Count
+numbers = [12, 7, 9, 20, 33, 42, 8, 15]
+
+odd_Count = 0
+Even_Count = 0
+
+for number in numbers :
+
+    if number % 2 == 1 :
+        odd_Count = odd_Count + 1
+    else:
+        Even_Count = Even_Count + 1
+
+print(odd_Count)
+print(Even_Count)
+
+#Find the Second largest Number
+numbers = [20, 55, 30, 80, 45, 70]
+
+largest_number = numbers[0]
+
+for number in numbers :
+    if number > largest_number :
+     largest_number = number
+print(largest_number)

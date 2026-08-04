@@ -620,3 +620,43 @@ print(smartPhone)
 
 smartPhone.clear()
 print(smartPhone)
+
+#Ask Two Numbers from the user and find which is the greater 
+number1 = int(input("Enter A Number :"))
+number2 = int(input("Enter the second Number :"))
+
+if number1 > number2 :
+    print(number1,"is the Greater")
+elif number2 > number1 :
+    print(number2,"is the Greatest")
+else:
+    print(number1,"&",number2,"Both Are Equal")
+
+#exception Hnadling
+x = 10
+try :
+    print(y) 
+except :
+    print("Something Went Wrong")
+
+try:
+    print(m)
+except NameError :
+    print("Variable Not Declared")
+except:
+    print("Something Went Wrong")
+
+try:
+    print("hello")
+except :
+    print("Something Went Wrong")
+else:
+    print("Nothing Went WRONG")
+
+#FINALLY
+try:
+    print(x)
+except:
+    print("something went Wrong!")
+finally:
+    print("I will Exceutre")
