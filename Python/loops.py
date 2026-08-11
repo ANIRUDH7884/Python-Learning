@@ -427,12 +427,77 @@ for number in numbers :
 print(odd_Count)
 print(Even_Count)
 
-#Find the Second largest Number
-numbers = [20, 55, 30, 80, 45, 70]
+# 🏢 Project 1 — SuperMart Billing System
+products = [
+    ("Rice", 1200),
+    ("Milk", 60),
+    ("Sugar", 55),
+    ("Oil", 180),
+    ("Soap", 45),
+    ("Laptop", 55000),
+    ("Mouse", 700)
+]
 
-largest_number = numbers[0]
+#print all products
 
-for number in numbers :
-    if number > largest_number :
-     largest_number = number
-print(largest_number)
+total = 0
+
+for name,price in products :
+    total = price + total
+    print(name,'-',price)
+
+#highest and lowest
+
+highest = products[0]
+lowest = products[0]
+
+for name , price in products :
+    if price > highest[1]:
+        highest = (name , price)
+
+    if price < highest[1]:
+        lowest = (name , price)
+
+#Count products
+premium_product = 0
+normal_product = 0
+
+for name,price in products :
+    if price > 500 :
+        premium_product = premium_product + 1
+    elif price < 500 :
+        normal_product = normal_product + 1
+
+#Discount + gst
+#Total
+actual_amount = 0
+
+for name,price in products:
+    actual_amount = price + actual_amount
+
+
+#discount Calculation
+if actual_amount >= 50000:
+    discount = actual_amount * 0.20
+elif actual_amount >= 10000 :
+    discount = actual_amount * 0.10
+else:
+    discount = 0
+
+#after Discount
+after_discount = actual_amount - discount
+
+#add gst
+gst = after_discount * 0.18
+
+#finalBill
+final_Amount = after_discount + gst
+
+#total products
+print("==============Bill==============")
+print(name, '💲',price)
+print("--------------------------------")
+print("Highest Product Rate : ", highest)
+print("Lowest Product Rate : ", lowest)
+print("Product Greater than 500 : ", premium_product)
+print("Normal product less than 500 : ", normal_product )
