@@ -86,3 +86,65 @@ select replace('I like java','like','love') as reult;
 
 select ltrim('  ANIRUDH') AS RESULT;
 select rtrim('Anirudh   ')as Coki;
+
+select concat(name,' - ', college_name) as student from job_placement;
+
+-- date function -- 
+
+select curdate();
+-- or 
+select current_date();
+
+select now();
+-- or
+select current_timestamp();
+
+select datediff(curdate(),"2026-07-01");
+
+select date_add(curdate(), interval 2 day );
+
+select date_sub(curdate(), interval 2 day );
+
+select year(curdate());
+
+select year("2026-08-14");
+
+select month("2026-08-14");
+
+select monthname("2026-08-14");
+
+select day("2026-08-14");
+
+select dayname("2026-08-14");
+
+#Aggregative Functions
+#used to perform calculation on multple rows an dreturn one single value
+
+#1. count() : count the no of rows including null values in column
+
+select count(*) from job_placement;
+select count(distinct stream) from job_placement;
+select count(*) from job_placement where stream ="computer science";
+select count(salary) from job_placement;
+
+#2. Sum() : to perform addition of rows
+
+select sum(salary) from job_placement;
+select avg(salary) from job_placement where stream = "computer science";
+select max(salary) from job_placement;
+select min(salary) from job_placement;
+
+#3. limit() : it controlls ow many records want to see
+
+select * from job_placement;
+select * from job_placement limit 6;
+
+#4. order by  : For sort the data
+
+select * from job_placement order by salary ; 
+select * from job_placement order by salary desc; 
+
+select * from job_placement order by years_of_experience desc; 
+select * from job_placement order by years_of_experience desc, salary asc;
+
+select * from job_placement where stream = "Mechanical Engineering" order by age desc;
