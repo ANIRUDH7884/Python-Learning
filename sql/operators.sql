@@ -148,3 +148,40 @@ select * from job_placement order by years_of_experience desc;
 select * from job_placement order by years_of_experience desc, salary asc;
 
 select * from job_placement where stream = "Mechanical Engineering" order by age desc;
+
+#Sub Query
+
+select avg(salary) from job_placement where stream = "computer science";
+select * from job_placement where salary > 48359.8131;
+select * from job_placement where salary > (select avg(salary) from job_placement where stream = "computer science");
+
+select avg(gpa) from job_placement where stream = "Electrical Engineering";
+select * from job_placement where gpa > (select avg(gpa) from job_placement where stream = "Electrical Engineering") order by salary desc;
+
+-- Case Condition --
+
+select name,salary,age,stream,
+case
+when salary < 25000
+then "Low Salary"
+when salary between 25000 and 50000
+then "Medium Salary"
+else
+"High Salary"
+end
+as Salary_status
+from job_placement;
+
+#Group by
+#used to group rows from a table based on one or more column
+#aggregate functions are mostly used with the gropu by clause
+#syntax : SELECT column1, aggregate_function(column 2) FROM table_name Group by coulumn 1;
+
+select stream,avg(salary) from job_placement group by stream;
+
+-- what is the maximum gpa of a student order by  their stream
+select stream , max(gpa) from job_placement group by stream;
+
+select stream , placement_status , count(*) from job_placement group by stream , placement_status;
+
+select college_name, count(*) as count from job_placement group by college_name order by count desc;
