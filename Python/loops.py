@@ -501,3 +501,82 @@ print("Highest Product Rate : ", highest)
 print("Lowest Product Rate : ", lowest)
 print("Product Greater than 500 : ", premium_product)
 print("Normal product less than 500 : ", normal_product )
+
+#----Nested Loops ----#
+
+for i in range(3):
+    print("Outer :", i)
+
+    for j in range(3):
+        print("Inner :", j)
+
+# for i in range(1):
+#     for j in range(5):
+#         print("*")
+
+
+for i in range(2):
+    for j in range(2):
+        print("*", end=" ")
+    print()
+
+#task -->
+
+# * * * *
+# * * *
+# * *
+# *
+
+for i in range(4):
+    for j in range(4 - i):
+        print("*" , end= " ")
+    print()
+
+#task 2 -->
+
+# *
+# * *
+# * * *
+# * * * *
+
+for i in range(4):
+    for j in range(i + 1):
+        print("*" , end= " ")
+    print()        
+
+
+for i in range(4):  #run outer loop 4 times range = 4 , so i = 0 1 2 3
+    for j in range(i + 1):
+        print(j + 1 , end =" ")
+    print()
+
+    #i = 0
+    #for j in range(0 + 1 = 1)
+    #j = 0, range(1) 
+    #print j + 1 (0 + 1) = 1 
+    #so, 1
+
+    #i = 1
+    #for j in range(2)
+    #0 , 1
+    #0 + 1 = 1 , 1 + 1 = 2
+    #so 1 2
+
+    #i = 2
+    #for j in range(3)
+    #0 , 1, 2
+    #0+1 = 2 , 1 + 1 = 2, 2+1 = 3
+    #so 1 2 3 
+
+    #i =3
+    #for j in range(4)
+    #0 , 1 , 2, 3
+    # 0 + 1 = 1 , 1 + 1 = 2, 2 + 1 = 3, 3 + 1 = 4
+    # 1 2 3 4 
+
+    #output : 
+    # 1
+    # 1 2 
+    # 1 2 3
+    # 1 2 3 4    
+
