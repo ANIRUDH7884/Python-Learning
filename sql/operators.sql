@@ -185,3 +185,11 @@ select stream , max(gpa) from job_placement group by stream;
 select stream , placement_status , count(*) from job_placement group by stream , placement_status;
 
 select college_name, count(*) as count from job_placement group by college_name order by count desc;
+
+#Having Clause in SQL ------> used to filter the grouped data 
+#mainly used with GROUP BY And Aggregate functions
+#Similar to where cluase difference is where clause use to filter table and having used to filter grouped data
+
+select stream , avg(salary) as Average_salary from job_placement group by stream having stream = "computer science";
+
+select stream, count(*) as placement_count from job_placement where placement_status="placed" group by stream having placement_count > 10;
