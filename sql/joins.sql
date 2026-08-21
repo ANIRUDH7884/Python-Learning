@@ -32,38 +32,103 @@ VALUES
 select e.emp_id, e.emp_name , d.department_name from
 employees e inner join departments d on e.department_id = d.department_id;
 
-create table customers (
-customer_id int primary key,
-customer_name varchar(50),
-city varchar(50)
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(50),
+    city VARCHAR(50)
 );
 
-create table orders(
-order_id int primary key,
-customer_id int,
-order_amount int,
-foreign key (customer_id) references customers(customer_id)
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    order_amount INT,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
 
-INSERT INTO customers (customer_id, customer_name, city) 
-VALUES
-    (1, 'Acme Corp', 'New York'),
-    (2, 'TechStart Inc', 'San Francisco'),
-    (3, 'Global Logistics', 'Chicago'),
-    (4, 'Retail Solutions', 'Austin');
+INSERT INTO customers VALUES
+(1, 'Acme Corp', 'New York'),
+(2, 'TechStart Inc', 'San Francisco'),
+(3, 'Global Logistics', 'Chicago'),
+(4, 'Retail Solutions', 'Austin');
 
-INSERT INTO orders (order_id, customer_id, order_amount) 
-VALUES
-    (1001, 1, 1500),
-    (1002, 2, 3400),
-    (1003, 1, 850),
-    (1004, 3, 5200),
-    (1005, 4, 1200);
-    
+INSERT INTO orders VALUES
+(1001, 1, 1500),
+(1002, 2, 3400),
+(1003, 1, 850),
+(1004, 3, 5200),
+(1005, 4, 1200);
+
 SELECT 
     c.customer_id, c.customer_name, o.order_id, o.order_amount
-FROM
-    customers c
-        INNER JOIN
-    orders o ON o.customer_id = c.customer_id
-ORDER BY o.order_amount DESC;
+FROM customers c
+INNER JOIN orders o 
+ON o.customer_id = c.customer_id;
+
+-- LEFT JOIN --->
+
+SELECT 
+ e.emp_id , e.emp_name , d.department_name 
+from employees e 
+left join departments d 
+on e.department_id = d.department_id;
+
+select
+ e.emp_id , e.emp_name , d.department_name 
+from departments d 
+left join employees e
+on d.department_id = e.department_id;
+
+-- Right Outer JOin / Right Join -- >
+SELECT 
+ e.emp_id , e.emp_name , d.department_name 
+from employees e 
+right join departments d 
+on e.department_id = d.department_id;
+
+select
+ e.emp_id , e.emp_name , d.department_name 
+from departments d 
+right join employees e
+on d.department_id = e.department_id;
+
+-- Union Join -->
+select
+ e.emp_id , e.emp_name , d.department_name 
+from employees e 
+left join departments d 
+on e.department_id = d.department_id
+union
+SELECT 
+ e.emp_id , e.emp_name , d.department_name 
+from employees e 
+right join departments d 
+on e.department_id = d.department_id;
+
+-- SET OPERATIONS --
+
+CREATE TABLE student_commerce (
+    roll_no INT PRIMARY KEY,
+    name VARCHAR(50),
+    branch VARCHAR(50)
+);
+
+CREATE TABLE student_science (
+    roll_no INT PRIMARY KEY,
+    name VARCHAR(50),
+    branch VARCHAR(50)
+);
+
+INSERT INTO student_commerce VALUES
+(1, 'Arjun', 'Commerce'),
+(2, 'Rahul', 'Commerce'),
+(3, 'Sneha', 'Commerce'),
+(4, 'Meera', 'Commerce'),
+(5, 'Kiran', 'Commerce');
+
+INSERT INTO student_science VALUES
+(3, 'Sneha', 'Science'),
+(4, 'Meera', 'Science'),
+(5, 'Kiran', 'Science'),
+(6, 'Anjali', 'Science'),
+(7, 'Vikram', 'Science');
