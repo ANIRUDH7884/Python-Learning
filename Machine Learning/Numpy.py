@@ -53,3 +53,38 @@ array2 = np.array([[10, 20, 30],[40, 50, 60],[70, 80, 90]])
 
 #print 20 , 30
 print(array2[0, 1 : 3])
+
+#9/09/2026
+
+#Numpy Array Shape
+#it returns with row and column of the 2 dimensional array
+
+array = np.array([[10 ,20 , 30], [30 , 69, 89], [38, 90, 78]])
+print(array.shape)
+
+#Iteration Throug 1d Array
+arr = np.array([1, 2, 3, 4, 5])
+
+for x in arr :
+    print(x)
+
+arr = np.array([[1, 3, 8],[1, 7, 8]])
+for x in arr :
+    print(x)
+
+#Numpy Join
+#To join to Array
+
+arr1 = np.array([1 , 2, 3])
+arr2 = np.array([4, 5, 6])
+
+arr = np.concatenate((arr1, arr2))
+print(arr)
+
+#Numpy Sort
+arr = np.array([3, 8, 9, 5])
+
+print(np.sort(arr))
+
+arr = np.array(["Ammu" , "Kannan", "Anirudh" , "Komali"])
+print(np.sort(arr))
