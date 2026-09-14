@@ -34,3 +34,6 @@ print(df)
 print(df.loc[0])
 print(df.loc[[0 , 1,2]])
 
+df = pd.DataFrame(data , index = ["day1", "day2", "Day3"])
+print(df)
+print(df.loc["day2"])
