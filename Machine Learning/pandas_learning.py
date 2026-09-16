@@ -30,3 +30,28 @@ print(data.describe(include= "O"))
 print(data.describe(include="all"))
 
 print(data['size'])
+
+print(data.color)
+
+#Locator
+
+print(data.loc[0:10, 'order_id':'size']) #indexed locating by specifying the required index
+
+print(data.loc[:, 'order_id':'size']) #not specifying the index so returns all orders
+
+print(data.loc[0:14, ['order_id', 'size']])
+
+#iloc ---> select data using position or index number
+
+print(data.iloc[:,0:5])
+
+print(data.iloc[500:, 2 :: 3])
+
+#data copy to make any changes so its doesnt affect the orginal Data
+df= data.copy()
+print("Copy : ", df)
+
+#to drop any Column
+
+new_ds = df.drop(columns=['size'])
+print(new_ds.head())
