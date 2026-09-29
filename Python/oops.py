@@ -59,3 +59,28 @@ acc1.withdraw(1000)
 
 acc1.show_balance()
 
+#Mobile Excersise
+class Mobile :
+
+    def __init__(self, brand,price):
+        self.brand = brand
+        self.price = price
+
+    def apply_discount(self, discount):
+        if discount > 0 :
+            discount_amount = self.price * (discount / 100)
+            self.price -= discount_amount
+            print("Total", self.price)
+            print(discount,"% Discount Applied For your Product")
+
+        else:
+            print("Invalid Discount")
+
+    def show_deatils(self):
+        print("Details of Product : ", self.brand ,"Rs:",self.price)
+
+device = Mobile("Samsung", 60000)
+
+device.show_deatils()
+device.apply_discount(20)
+
