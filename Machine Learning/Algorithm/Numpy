@@ -1,0 +1,299 @@
+{
+    "nbformat": 4,
+    "nbformat_minor": 0,
+    "metadata": {
+        "colab": {
+            "provenance": [],
+            "authorship_tag": "ABX9TyONiMKwXv3nAQubYT3ccQT+"
+        },
+        "kernelspec": {
+            "name": "python3",
+            "display_name": "Python 3"
+        },
+        "language_info": {
+            "name": "python"
+        }
+    },
+    "cells": [
+        {
+            "cell_type": "code",
+            "execution_count": 4,
+            "metadata": {
+                "colab": {
+                    "base_uri": "https://localhost:8080/"
+                },
+                "id": "O2EqFTIch8IG",
+                "executionInfo": {
+                    "status": "ok",
+                    "timestamp": 1791950340850,
+                    "user_tz": -330,
+                    "elapsed": 20,
+                    "user": {
+                        "displayName": "Talky Chat",
+                        "userId": "05022815365951605689"
+                    }
+                },
+                "outputId": "d734f381-10ac-42af-8c70-7917e80ceb6e"
+            },
+            "outputs": [
+                {
+                    "output_type": "stream",
+                    "name": "stdout",
+                    "text": [
+                        "[10 20 30 40]\n",
+                        "<class 'numpy.ndarray'>\n",
+                        "sum :  100\n",
+                        "Average :  25.0\n",
+                        "Highest :  40\n",
+                        "Lowest :  10\n"
+                    ]
+                }
+            ],
+            "source": [
+                "#Numpy\n",
+                "\n",
+                "import numpy as np\n",
+                "\n",
+                "array1 = np.array([10, 20, 30, 40])\n",
+                "\n",
+                "print(array1)\n",
+                "print(type(array1))\n",
+                "\n",
+                "#calculations\n",
+                "print(\"sum : \"  ,np.sum(array1))\n",
+                "print(\"Average : \", np.average(array1))\n",
+                "print(\"Highest : \", np.max(array1))\n",
+                "print(\"Lowest : \", np.min(array1))\n",
+                "\n"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "#Temperature Calculations\n",
+                "import numpy as np\n",
+                "temperatures = np.array([28, 30, 32, 29, 35, 31, 27])\n",
+                "\n",
+                "# Then calculate:\n",
+                "# 1. The average temperature.\n",
+                "# 2. The maximum temperature.\n",
+                "# 3. The minimum temperature.\n",
+                "# 4. The temperatures greater than 30°C.\n",
+                "\n",
+                "average = np.average(temperatures)\n",
+                "print(\"Average Temperature : \", average)\n",
+                "\n",
+                "maximum = np.max(temperatures)\n",
+                "print(\"Highest temperatures : \", maximum)\n",
+                "\n",
+                "minimum = np.min(temperatures)\n",
+                "print(\"Lowest temperatures : \", minimum)\n",
+                "\n",
+                "greater_than_30 = temperatures[temperatures > 30]\n",
+                "print(\"Temperatures greater than 30 : \", greater_than_30)\n"
+            ],
+            "metadata": {
+                "colab": {
+                    "base_uri": "https://localhost:8080/"
+                },
+                "id": "VPHHGbTQkfnH",
+                "executionInfo": {
+                    "status": "ok",
+                    "timestamp": 1791950711117,
+                    "user_tz": -330,
+                    "elapsed": 13,
+                    "user": {
+                        "displayName": "Talky Chat",
+                        "userId": "05022815365951605689"
+                    }
+                },
+                "outputId": "c2d1ab21-4656-426d-96bf-12cf798ff7c7"
+            },
+            "execution_count": 6,
+            "outputs": [
+                {
+                    "output_type": "stream",
+                    "name": "stdout",
+                    "text": [
+                        "Average Temperature :  30.285714285714285\n",
+                        "Highest temperatures :  35\n",
+                        "Lowest temperatures :  27\n",
+                        "Temperatures greater than 30 :  [32 35 31]\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "#Marks Calculation - slicing and indexing\n",
+                "import numpy as np\n",
+                "\n",
+                "marks = np.array([45, 67, 89, 34, 76, 92, 58])\n",
+                "\n",
+                "# Print the first mark.\n",
+                "# Print the last mark.\n",
+                "# Print the first four marks.\n",
+                "# Print all marks greater than 70.\n",
+                "\n",
+                "first_mark = marks[0]\n",
+                "print(\"First Mark : \", first_mark)\n",
+                "\n",
+                "last_mark = marks[-1]\n",
+                "print(\"Last Mark : \", last_mark)\n",
+                "\n",
+                "first_four_marks = marks[:4]\n",
+                "print(\"First Four Marks : \", first_four_marks)\n",
+                "\n",
+                "marks_greaterthan_70 = marks[marks > 70]\n",
+                "print(\"Marks Greater than 70 : \", marks_greaterthan_70)"
+            ],
+            "metadata": {
+                "colab": {
+                    "base_uri": "https://localhost:8080/"
+                },
+                "id": "16pHzQfymFNP",
+                "executionInfo": {
+                    "status": "ok",
+                    "timestamp": 1791974371424,
+                    "user_tz": -330,
+                    "elapsed": 21,
+                    "user": {
+                        "displayName": "Talky Chat",
+                        "userId": "05022815365951605689"
+                    }
+                },
+                "outputId": "3fab59d2-349c-4c59-f216-6abc029cc79b"
+            },
+            "execution_count": 1,
+            "outputs": [
+                {
+                    "output_type": "stream",
+                    "name": "stdout",
+                    "text": [
+                        "First Mark :  45\n",
+                        "Last Mark :  58\n",
+                        "First Four Marks :  [45 67 89 34]\n",
+                        "Marks Greater than 70 :  [89 76 92]\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "import numpy as np\n",
+                "\n",
+                "numbers = np.array([10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120])\n",
+                "\n",
+                "# 1. Print the shape.\n",
+                "# 2. Print the number of dimensions.\n",
+                "# 3. Print the total number of elements.\n",
+                "# 4. Reshape the array into 3 rows and 4 columns.\n",
+                "\n",
+                "shape = numbers.shape\n",
+                "print(\"Shape : \", shape)\n",
+                "\n",
+                "dimensions = numbers.ndim\n",
+                "print(\"Dimension : \", dimensions)\n",
+                "\n",
+                "total_elements = numbers.size\n",
+                "print(\"Total Elements : \", total_elements)\n",
+                "\n",
+                "reshape = numbers.reshape(3 , 4)\n",
+                "print(reshape)"
+            ],
+            "metadata": {
+                "colab": {
+                    "base_uri": "https://localhost:8080/"
+                },
+                "id": "T2paDfsEAb8-",
+                "executionInfo": {
+                    "status": "ok",
+                    "timestamp": 1791974834895,
+                    "user_tz": -330,
+                    "elapsed": 14,
+                    "user": {
+                        "displayName": "Talky Chat",
+                        "userId": "05022815365951605689"
+                    }
+                },
+                "outputId": "7e639e59-7f79-40e8-df50-caaf203fae8e"
+            },
+            "execution_count": 3,
+            "outputs": [
+                {
+                    "output_type": "stream",
+                    "name": "stdout",
+                    "text": [
+                        "Shape :  (12,)\n",
+                        "Dimension :  1\n",
+                        "Total Elements :  12\n",
+                        "[[ 10  20  30  40]\n",
+                        " [ 50  60  70  80]\n",
+                        " [ 90 100 110 120]]\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "import numpy as np\n",
+                "\n",
+                "marks = np.array([\n",
+                "    [80, 75, 90],\n",
+                "    [65, 85, 70],\n",
+                "    [92, 88, 95]\n",
+                "])\n",
+                "\n",
+                "# Using the same marks array, write code to calculate:\n",
+                "# 1. The average mark for each subject.\n",
+                "# 2. The highest mark for each student.\n",
+                "# 3. The lowest mark for each subject.\n",
+                "\n",
+                "total = np.sum(marks, axis = 1)\n",
+                "print(total)\n",
+                "average = 3/total\n",
+                "print(average)"
+            ],
+            "metadata": {
+                "colab": {
+                    "base_uri": "https://localhost:8080/"
+                },
+                "id": "wqOLubqTBBp3",
+                "executionInfo": {
+                    "status": "ok",
+                    "timestamp": 1791976030557,
+                    "user_tz": -330,
+                    "elapsed": 19,
+                    "user": {
+                        "displayName": "Talky Chat",
+                        "userId": "05022815365951605689"
+                    }
+                },
+                "outputId": "bdf55acc-0c9e-4716-e5ae-483f067623f9"
+            },
+            "execution_count": 7,
+            "outputs": [
+                {
+                    "output_type": "stream",
+                    "name": "stdout",
+                    "text": [
+                        "[245 220 275]\n",
+                        "[0.0122449  0.01363636 0.01090909]\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "cell_type": "code",
+            "source": [],
+            "metadata": {
+                "id": "isqQHfxmC2Mb"
+            },
+            "execution_count": null,
+            "outputs": []
+        }
+    ]
+}

@@ -84,3 +84,36 @@ device = Mobile("Samsung", 60000)
 device.show_deatils()
 device.apply_discount(20)
 
+#shopping cart
+class Cart:
+
+    def __init__(self):
+        self.items = {}
+        self.total = 0
+
+    def add_items(self,name, price):
+        self.items.update({name : price})
+        self.total += price
+
+    def remove_item(self, name):
+        if name in self.items:
+            price = self.items[name]
+            self.total -= price
+            del self.items[name]
+        else:
+            print("Item not found")
+
+
+cart1 = Cart()
+
+cart1.add_items("watch", 500)
+cart1.add_items("shirt", 2500)
+
+print("items = " , cart1.items)
+print("Total = ", cart1.total)
+
+cart1.remove_item("watch")
+print("items = " , cart1.items)
+print("Total = ", cart1.total)
+
+#Encapsulation
